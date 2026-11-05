@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Wheels on Fire | Home</title>
+</head>
+
+<body>
+
+    <div class="avoid_footer">
+
+        <header>
+            <img
+                src="companybanner.png"
+                class="company-banner"
+                alt="Wheels on Fire company banner"
+            >
+        </header>
+
+        <nav aria-label="Main navigation">
+
+            <button
+                class="logo-button"
+                onclick="window.location.href='index.html'"
+                aria-label="Go to Wheels on Fire homepage"
+            >
+                <img
+                    src="clients_logo.png"
+                    alt=""
+                    width="90"
+                    height="64"
+                >
+            </button>
+
+            <div class="dropdown">
+
+                <button
+                    class="dropbtn"
+                    type="button"
+                    onclick="toggleDropdown()"
+                    aria-expanded="false"
+                    aria-controls="menuDropdown"
+                >
+                    Menu
+                </button>
+
+                <div class="dropdown-content" id="menuDropdown">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+
+            </div>
+
+            <button
+                class="nav-button"
+                onclick="window.location.href='about.html'"
+            >
+                About me!
+            </button>
+
+        </nav>
+
+        <main>
+
+            <h1 class="background-image">
+                <span>Welcome to Wheels on Fire!</span>
+            </h1>
+
+            <div class="main-content">
+                <img
+                    src="Mainpage.jpg"
+                    alt="Portrait of the Wheels on Fire CEO"
+                    width="300"
+                    height="300"
+                >
+
+                <p>Photo by Titi Laru on Unsplash</p>
+            </div>
+
+        </main>
+
+    </div>
+
+    <footer>
+
+        <p>
+            Contact us at
+            <a href="mailto:info@wheelsonfire.ltd">
+                info@wheelsonfire.ltd
+            </a>
+        </p>
+
+        <p>
+            <a href="https://facebook.com">Facebook</a> |
+            <a href="https://twitter.com">Twitter</a> |
+            <a href="https://instagram.com">Instagram</a>
+        </p>
+
+        <p>Designed by Webloom</p>
+
+        <p>&copy; 2026 Wheelsonfire.ltd. All rights reserved.</p>
+
+    </footer>
+
+    <script>
+        function toggleDropdown() {
+            const menu = document.getElementById("menuDropdown");
+            const button = document.querySelector(".dropbtn");
+
+            const isOpen = menu.classList.toggle("show");
+            button.setAttribute("aria-expanded", isOpen);
+        }
+
+        document.addEventListener("click", function(event) {
+            const dropdown = document.querySelector(".dropdown");
+
+            if (!dropdown.contains(event.target)) {
+                document.getElementById("menuDropdown")
+                    .classList.remove("show");
+
+                document.querySelector(".dropbtn")
+                    .setAttribute("aria-expanded", "false");
+            }
+        });
+
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                document.getElementById("menuDropdown")
+                    .classList.remove("show");
+
+                document.querySelector(".dropbtn")
+                    .setAttribute("aria-expanded", "false");
+            }
+        });
+    </script>
+
+</body>
+</html>

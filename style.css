@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&display=swap');
+{
+box-sizing: border-box;
+}
+body {
+background-color: #f2f2f2;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+color: #111111;
+}
+.avoid_footer {
+display: flex;
+flex-direction: column;
+min-height: 100vh;
+}
+.company-banner {
+width: 100%;
+height: 150px;
+object-fit: cover;
+display: block;
+}
+.fill-width-image {
+width: 100%;
+height: auto;
+object-fit: cover;
+}
+button {
+display: inline-block;
+transition-duration: 0.4s;
+border-radius: 12px;
+background-color: #8b0000;
+color: #ffffff;
+padding: 8px 14px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+margin: 4px;
+cursor: pointer;
+font-family: "Courier New", monospace;
+border: 2px solid #2a0000;
+}
+button:hover {
+background-color: #400202;
+color: #ffffff;
+}
+button:focus-visible,
+a:focus-visible {
+outline: 3px solid #FFE600;
+outline-offset: 2px;
+}
+nav {
+display: flex;
+align-items: center;
+gap: 10px;
+min-height: 64px;
+position: sticky;
+top: 0;
+z-index: 1000;
+background-color: #b70202;
+border-bottom: 2px solid #2a0000;
+border-left: 2px solid #2a0000;
+border-right: 2px solid #2a0000;
+padding: 4px 10px;
+}
+button.logo-button {
+background-color: transparent;
+border: none;
+padding: 0;
+margin: 0;
+}
+.logo-button img {
+display: block;
+}
+button.nav-button {
+margin-left: auto;
+}
+.dropdown {
+position: relative;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+top: 100%;
+left: 0;
+background: linear-gradient(
+to top,
+#000000,
+#b70202
+);
+min-width: 160px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1001;
+}
+.dropdown-content.show {
+display: block;
+}
+.dropdown-content a {
+display: block;
+color: #ffffff;
+padding: 12px 14px;
+text-decoration: none;
+font-family: "Courier New", monospace;
+font-size: 16px;
+}
+.dropdown-content a:hover {
+background-color: #400202;
+}
+main {
+flex: 1;
+margin: 0;
+padding: 0;
+}
+.background-image {
+background-image: url('FieryTireTracksonAsphalt.png');
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 300px;
+width: 100%;
+padding: 0;
+margin: 0;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: 'Barlow Condensed', sans-serif;
+font-style: italic;
+text-transform: uppercase;
+line-height: 1;
+font-weight: 800;
+letter-spacing: 1px;
+font-size: 72px;
+}
+.background-image span {
+background-image: linear-gradient(
+180deg,
+#FFE600 0%,
+#FFB800 35%,
+#FF6500 70%,
+#E52B00 100%
+);
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke: 2px #111111;
+paint-order: stroke fill;
+filter: drop-shadow(
+3px 4px 3px rgba(0, 0, 0, 0.8)
+);
+}
+.main-content {
+padding: 20px;
+}
+.main-content img {
+max-width: 100%;
+height: auto;
+display: block;
+}
+.main-content p {
+margin-top: 10px;
+line-height: 1.5;
+}
+footer {
+background-color: #ca4502;
+background-image: linear-gradient(
+to top,
+#000000,
+#b70202
+);
+color: #ffffff;
+text-align: center;
+font-family: "Courier New", monospace;
+font-weight: bold;
+padding: 10px;
+width: 100%;
+border-top: 2px solid #2a0000;
+border-left: 2px solid #2a0000;
+border-right: 2px solid #2a0000;
+}
+footer a {
+color: #ffffff;
+text-decoration: underline;
+}
+footer a:hover {
+color: #FFE600;
+}
+@media (max-width: 600px) {
+.company-banner {
+height: 100px;
+}
+.background-image {
+font-size: 40px;
+padding: 0 15px;
+}
+.background-image span {
+-webkit-text-stroke: 1px #111111;
+}
+nav {
+gap: 5px;
+padding: 4px;
+}
+}
